@@ -3,8 +3,8 @@ Pipelines:
   inputs: [RealSenseCameraTopic]
   infers:
     - name: ObjectDetection
-      model: /opt/openvino_toolkit/open_model_zoo/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP32/mobilenet-ssd.xml
-      engine: CPU
+      model: /opt/openvino_toolkit/open_model_zoo/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP16/mobilenet-ssd.xml
+      engine: MYRIAD
       label: to/be/set/xxx.labels
       batch: 16
   outputs: [ImageWindow, RosTopic, RViz]
